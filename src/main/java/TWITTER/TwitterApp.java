@@ -118,7 +118,7 @@ public class TwitterApp {
             JOptionPane.showMessageDialog(null, "El tweet no puede estar vacío.");
             return;
         }
-        Tweet tweet = new Tweet(tweetText, currentUser);
+        Tweet tweet = new Tweet(tweetText);
         currentUser.tweet(tweet);
         JOptionPane.showMessageDialog(null, "Tweet publicado.");
     }

@@ -4,7 +4,7 @@ public class Tweet {
     private CuentaUsuario user; // The user who created the tweet.
     private String message;
 
-    public Tweet(String text, CuentaUsuario user) {
+    public Tweet(String text) {
         this.text = text;
         this.user = user; // Ensure the user is set here.
     }
