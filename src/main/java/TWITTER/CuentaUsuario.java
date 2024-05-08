@@ -49,4 +49,10 @@ public class CuentaUsuario {
     public String getEmail() {
         return email;
     }
+
+    public static void main(String[] args) {
+        CuentaUsuario user1 = new CuentaUsuario("user1", "areyemor@myuax.com");
+
+    }
+
 }
