@@ -98,10 +98,15 @@ n = √64 = 8
 Por lo tanto, a partir de un tamaño de entrada n de 8, la función A es más eficiente que la función B en términos de número de operaciones.
 
 ## EJERCICIO 3
+a) El código imprime el resultado de la multiplicación de a por sí mismo b veces, utilizando recursividad. Si b es igual a 0, el resultado es 1. Si a es igual a 0, el resultado es 0. Si b es negativo, el programa no compilará porque la llamada recursiva recursive(a, b-1) no tiene sentido para valores negativos de b. Para arreglar el programa, se puede agregar una condición para manejar el caso en que b es negativo, por ejemplo, devolviendo 0 o lanzando una excepción.
 
+b) El cálculo que está haciendo el algoritmo es una multiplicación de a por sí mismo b veces, utilizando recursividad. La recursividad se emplea en la llamada a la función recursive(a, b-1), que se repite hasta que b sea igual a 0. El tipo de recursividad que se está empleando es la recursividad de cola, ya que la llamada recursiva es la última instrucción en la función.
 
+## EJERCICIO 4
+EL CODIGO ESTA EN LA CARPETA, EL ARCHIVO SE LLAMA SUMADIGITOS.
+b) El tipo de recursividad que se está empleando es la recursividad directa, ya que la llamada recursiva se realiza al mismo método con un argumento diferente.
 
-
+La complejidad computacional del algoritmo es O(log n), ya que en cada iteración se divide el número entre 10, lo que significa que el número de iteraciones es proporcional al logaritmo en base 10 del número de dígitos del número de entrada. En cada iteración, se realiza una operación de módulo y una operación de suma, lo que significa que la complejidad temporal es O(log n). La complejidad espacial es O(log n), ya que se necesita espacio adicional en la pila de llamadas para cada llamada recursiva.
 
 
 
