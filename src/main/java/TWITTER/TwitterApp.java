@@ -2,6 +2,7 @@ package TWITTER;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Optional;
 
 public class TwitterApp {
@@ -78,12 +79,6 @@ public class TwitterApp {
         }
     }
 
-    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
-        JButton button = new JButton(text);
-        button.addActionListener(actionListener);
-        button.setBackground(new Color(173, 216, 230)); // Light blue color
-        panel.add(button);
-    }
     private static void loadUser() {
         String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario a cargar:");
         if (!Utils.isValidEmail(email)) {
@@ -116,12 +111,6 @@ public class TwitterApp {
         }
     }
 
-    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
-        JButton button = new JButton(text);
-        button.addActionListener(actionListener);
-        button.setBackground(new Color(173, 216, 230)); // Light blue color
-        panel.add(button);
-    }
 
     private static void publishTweet() {
         if (currentUser == null) {
@@ -137,12 +126,7 @@ public class TwitterApp {
         currentUser.tweet(tweet);
         JOptionPane.showMessageDialog(null, "Tweet publicado.");
     }
-    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
-        JButton button = new JButton(text);
-        button.addActionListener(actionListener);
-        button.setBackground(new Color(173, 216, 230)); // Light blue color
-        panel.add(button);
-    }
+
     private static void followUser() {
         if (currentUser == null) {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
@@ -175,12 +159,6 @@ public class TwitterApp {
     }
 
 
-    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
-        JButton button = new JButton(text);
-        button.addActionListener(actionListener);
-        button.setBackground(new Color(173, 216, 230)); // Light blue color
-        panel.add(button);
-    }
     private static void viewTimeline() {
         if (currentUser == null) {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
@@ -201,12 +179,6 @@ public class TwitterApp {
         JOptionPane.showMessageDialog(null, timelineDetails.toString(), "Timeline y Seguimientos", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
-        JButton button = new JButton(text);
-        button.addActionListener(actionListener);
-        button.setBackground(new Color(173, 216, 230)); // Light blue color
-        panel.add(button);
-    }
     private static void sendDirectMessage() {
         if (currentUser == null) {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
@@ -223,15 +195,11 @@ public class TwitterApp {
         currentUser.sendDirectMessage(dm);
         JOptionPane.showMessageDialog(null, "Mensaje enviado a: " + receiver.getAlias());
     }
-    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
-        JButton button = new JButton(text);
-        button.addActionListener(actionListener);
-        button.setBackground(new Color(173, 216, 230)); // Light blue color
-        panel.add(button);
-    }
+
     private static void sortUsersByEmail() {
         userManager.sortUsersByEmail();
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
     }
 }
+
 
