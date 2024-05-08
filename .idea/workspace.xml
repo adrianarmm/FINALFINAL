@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="82">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="90" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
@@ -66,31 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715153505674</updated>
-      <workItem from="1715153506764" duration="8046000" />
-    </task>
-    <task id="LOCAL-00035" summary="35">
-      <option name="closed" value="true" />
-      <created>1715155976271</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1715155976271</updated>
-    </task>
-    <task id="LOCAL-00036" summary="36">
-      <option name="closed" value="true" />
-      <created>1715156022814</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1715156022814</updated>
-    </task>
-    <task id="LOCAL-00037" summary="37">
-      <option name="closed" value="true" />
-      <created>1715156075037</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1715156075037</updated>
+      <workItem from="1715153506764" duration="9129000" />
     </task>
     <task id="LOCAL-00038" summary="38">
       <option name="closed" value="true" />
@@ -460,16 +437,37 @@
       <option name="project" value="LOCAL" />
       <updated>1715160617702</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="83">
+      <option name="closed" value="true" />
+      <created>1715161615738</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1715161615738</updated>
+    </task>
+    <task id="LOCAL-00085" summary="84 omo se puede ver, a partir de un tamaño de entrada n de 8, la función A tiene un número menor de operaciones que la función B, lo que significa que es más eficiente en términos de tiempo de ejecución.">
+      <option name="closed" value="true" />
+      <created>1715161771992</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1715161771992</updated>
+    </task>
+    <task id="LOCAL-00086" summary="90">
+      <option name="closed" value="true" />
+      <created>1715162714120</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1715162714120</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="58" />
-    <MESSAGE value="59" />
-    <MESSAGE value="60" />
     <MESSAGE value="61" />
     <MESSAGE value="62" />
     <MESSAGE value="63" />
@@ -492,6 +490,9 @@
     <MESSAGE value="80" />
     <MESSAGE value="81" />
     <MESSAGE value="82" />
-    <option name="LAST_COMMIT_MESSAGE" value="82" />
+    <MESSAGE value="83" />
+    <MESSAGE value="84 omo se puede ver, a partir de un tamaño de entrada n de 8, la función A tiene un número menor de operaciones que la función B, lo que significa que es más eficiente en términos de tiempo de ejecución." />
+    <MESSAGE value="90" />
+    <option name="LAST_COMMIT_MESSAGE" value="90" />
   </component>
 </project>
