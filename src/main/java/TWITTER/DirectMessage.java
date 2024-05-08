@@ -1,9 +1,12 @@
+package TWITTER;
+
 import TWITTER.CuentaUsuario;
 import TWITTER.Tweet;
-Package TWITTER;
+
 
 public class DirectMessage extends Tweet {
     private CuentaUsuario receiver;
+    private CuentaUsuario sender;
 
     // Corrección del constructor para incluir sender en la llamada al constructor de la superclase.
     public DirectMessage(String message, CuentaUsuario sender, CuentaUsuario receiver) {
@@ -35,5 +38,13 @@ public class DirectMessage extends Tweet {
         CuentaUsuario receiver = new CuentaUsuario("receiver", "ruben@myuax.com");
         DirectMessage dm = new DirectMessage("Hola", sender, receiver);
         System.out.println(dm.toString());
+    }
+
+    public CuentaUsuario getSender() {
+        return sender;
+    }
+
+    public void setSender(CuentaUsuario sender) {
+        this.sender = sender;
     }
 }

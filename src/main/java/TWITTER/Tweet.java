@@ -19,4 +19,8 @@ public class Tweet {
     public CuentaUsuario getUser() {
         return user;
     }
+
+    protected String getMessage() {
+            return text;
+    }
 }
