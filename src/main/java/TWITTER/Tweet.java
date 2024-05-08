@@ -7,9 +7,8 @@ public class Tweet {
     private String message;
     private CuentaUsuario sender;
 
-    // Constructor modificado para incluir CuentaUsuario como el remitente del tweet.
     public Tweet(String message, CuentaUsuario sender) {
-        this.time = LocalDate.now(); // Asumimos que el tweet se crea con la fecha actual.
+        this.time = LocalDate.now(); // Asumimos que la fecha del tweet es la actual.
         this.message = message;
         this.sender = sender;
     }
@@ -31,8 +30,7 @@ public class Tweet {
         return "Tweet{" +
                 "time=" + time +
                 ", message='" + message + '\'' +
-                ", sender=" + (sender != null ? sender.getAlias() : "Unknown") + // Verifica si el remitente es nulo antes de acceder a su alias.
+                ", sender=" + (sender != null ? sender.getAlias() : "Unknown") +
                 '}';
     }
-
 }

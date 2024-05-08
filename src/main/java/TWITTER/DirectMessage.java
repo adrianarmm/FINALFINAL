@@ -22,4 +22,11 @@ public class DirectMessage extends Tweet {
                 ", sender='" + (getSender() != null ? getSender().getAlias() : "Unknown sender") + '\'' +
                 '}';
     }
+
+    public static void main(String[] args) {
+        CuentaUsuario sender = new CuentaUsuario("sender", "areyemor@myuax.com");
+        CuentaUsuario receiver = new CuentaUsuario("receiver", "ruben@myuax.com");
+        DirectMessage dm = new DirectMessage("Hola", sender, receiver);
+        System.out.println(dm.toString());
+    }
 }
