@@ -83,7 +83,5 @@ public class CuentaUsuario {
             }
         }
 
-    public Object getEmail() {
-        return email;
-    }
+
 }
