@@ -114,9 +114,13 @@ public class TwitterApp {
             return;
         }
         String tweetText = JOptionPane.showInputDialog(null, "Introduzca el tweet a publicar:");
-        Tweet tweet = new Tweet(tweetText);
+        if (tweetText == null || tweetText.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El tweet no puede estar vacío.");
+            return;
+        }
+        Tweet tweet = new Tweet(tweetText, currentUser);
         currentUser.tweet(tweet);
-        JOptionPane.showMessageDialog(null, "Tweet publicado: " + tweet.getText());
+        JOptionPane.showMessageDialog(null, "Tweet publicado.");
     }
 
     private static void followUser() {
