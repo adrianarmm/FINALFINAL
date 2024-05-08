@@ -35,13 +35,13 @@ public class TwitterApp {
     }
 
     private static void registerOwner() {
-        URL iconURL =TwitterApp.class.getResource("/Users/adrianareyesmorera/Downloads/pajarito.png"); // Asegúrate de cambiar la ruta
+        ImageIcon icon = new ImageIcon("/Users/adrianareyesmorera/Escritorio/pajarito.png"); // Asegúrate de cambiar la ruta
         JOptionPane.showMessageDialog(
                 null,
                 "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.",
                 "Bienvenida",
                 JOptionPane.INFORMATION_MESSAGE,
-new ImageIcon(iconURL)
+                icon
         );
         addUser(true);
     }
