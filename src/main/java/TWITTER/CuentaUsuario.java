@@ -65,7 +65,7 @@ public class CuentaUsuario {
 
             user1.follow(user2);
 
-            Tweet tweet1 = new Tweet("Hello, world!");
+            Tweet tweet1 = new Tweet("Bienvenido a Twitter", user1);
             user2.tweet(tweet1);
 
             System.out.println(user1.getAlias() + "'s timeline:");

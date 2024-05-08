@@ -7,7 +7,7 @@ public class Retweet extends Tweet {
     private Tweet originalTweet;
 
     public Retweet(LocalDate time, String message, CuentaUsuario sender, Tweet originalTweet) {
-        super(time, message, sender);
+        super(message, sender);
         this.originalTweet = originalTweet;
     }
 

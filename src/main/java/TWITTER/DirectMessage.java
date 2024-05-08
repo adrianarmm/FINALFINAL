@@ -6,7 +6,7 @@ public class DirectMessage extends Tweet {
     private CuentaUsuario receiver;
 
     public DirectMessage(LocalDate time, String message, CuentaUsuario sender, CuentaUsuario receiver) {
-        super(time, message, sender);
+        super(message, sender);
         this.receiver = receiver;
     }
 
