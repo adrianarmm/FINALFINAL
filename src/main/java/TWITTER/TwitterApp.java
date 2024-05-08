@@ -1,7 +1,11 @@
 package TWITTER;
 
+import jdk.internal.classfile.impl.BlockCodeBuilderImpl;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Optional;
 
 public class TwitterApp {
@@ -44,7 +48,8 @@ public class TwitterApp {
         panel.add(sendMessageButton);
 
         JButton sortUsersByEmailButton = new JButton("Ordenar usuarios por email");
-        sortUsersByEmailButton.addActionListener(e -> sortUsersByEmail());
+        BlockCodeBuilderImpl users = null;
+        sortUsersByEmailButton.addActionListener(e -> sortUsersByEmail(users));
         panel.add(sortUsersByEmailButton);
 
         frame.add(panel);
@@ -178,8 +183,13 @@ public class TwitterApp {
         JOptionPane.showMessageDialog(null, "Mensaje enviado a: " + receiver.getAlias());
     }
 
-    private static void sortUsersByEmail() {
+    private static void sortUsersByEmail(BlockCodeBuilderImpl users) {
+        if (currentUser == null) {
+            JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
+            return;
+        }
         userManager.sortUsersByEmail();
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
     }
+
 }

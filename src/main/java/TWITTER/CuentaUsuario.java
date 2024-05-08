@@ -85,7 +85,7 @@ public class CuentaUsuario {
         }
 
 
-    public <U> U getEmail() {
+    public static <U> U getEmail() {
         return (U) email;
     }
 
@@ -124,5 +124,9 @@ public class CuentaUsuario {
 
     public CuentaUsuario[] getFollowing() {
             return new CuentaUsuario[0];
+    }
+
+    public static <U> U getEmail(Object o) {
+            return null;
     }
 }
