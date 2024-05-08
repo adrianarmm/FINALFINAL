@@ -48,3 +48,5 @@ public class CuentaUsuario {
 
     public String getEmail() {
         return email;
+    }
+}
