@@ -105,4 +105,8 @@ public class CuentaUsuario {
             }
         }
     }
+
+    public Tweet[] getTimeline() {
+        return timeline.toArray(new Tweet[0]);
+    }
 }
