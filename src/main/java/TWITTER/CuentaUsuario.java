@@ -58,4 +58,20 @@ public class CuentaUsuario {
     public String getAlias() {
         return alias;
     }
+
+        public static void main(String[] args) {
+            CuentaUsuario user1 = new CuentaUsuario("johnDoe", "johndoe@example.com");
+            CuentaUsuario user2 = new CuentaUsuario("janeDoe", "janedoe@example.com");
+
+            user1.follow(user2);
+
+            Tweet tweet1 = new Tweet("Hello, world!");
+            user2.tweet(tweet1);
+
+            System.out.println(user1.getAlias() + "'s timeline:");
+            for (Tweet tweet : user1.timeline) {
+                System.out.println(tweet.getText());
+            }
+        }
+    }
 }

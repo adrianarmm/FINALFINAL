@@ -2,7 +2,7 @@ package TWITTER;
 
 import java.time.LocalDate;
 
-public abstract class Tweet {
+public class Tweet {
     protected LocalDate time;
     protected String message;
     protected CuentaUsuario sender;
@@ -32,5 +32,9 @@ public abstract class Tweet {
                 ", message='" + message + '\'' +
                 ", sender=" + sender.getAlias() +
                 '}';
+    }
+
+    public boolean getText() {
+        return false;
     }
 }
