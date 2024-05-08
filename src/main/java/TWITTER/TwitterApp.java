@@ -2,25 +2,25 @@ package TWITTER;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class TwitterApp {
     private static UserManager userManager;
     private static CuentaUsuario currentUser;
 
     public static void main(String[] args) {
-
+        userManager = new UserManager();
+        // userManager.loadUsersFromFile("users.txt"); // Ya no se necesita
 
         JFrame frame = new JFrame("Twitter App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
 
-        userManager = new UserManager();
-        userManager.addUser("user1", "areyemor@myuax.com");
-
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(6, 1));
+        panel.setLayout(new GridLayout(7, 1));
+
+        JButton addUserButton = new JButton("Registrar nuevo usuario");
+        addUserButton.addActionListener(e -> addUser());
+        panel.add(addUserButton);
 
         JButton loadUserButton = new JButton("Cargar usuario en memoria");
         loadUserButton.addActionListener(e -> loadUser());
@@ -48,6 +48,17 @@ public class TwitterApp {
 
         frame.add(panel);
         frame.setVisible(true);
+    }
+
+    private static void addUser() {
+        String alias = JOptionPane.showInputDialog(null, "Introduzca el alias del usuario:");
+        String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario:");
+        try {
+            userManager.addUser(alias, email);
+            JOptionPane.showMessageDialog(null, "Usuario registrado con éxito.");
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(null, "Error al registrar usuario: " + ex.getMessage());
+        }
     }
 
     private static void loadUser() {
