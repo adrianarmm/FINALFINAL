@@ -10,6 +10,7 @@ public class CuentaUsuario {
     private List<CuentaUsuario> following;
     private List<CuentaUsuario> followers;
     private List<Tweet> timeline;
+    private String name;
 
     public CuentaUsuario(String alias, String email) {
         if (!Utils.isValidAlias(alias) || !Utils.isValidEmail(email)) {
@@ -86,5 +87,22 @@ public class CuentaUsuario {
 
     public <U> U getEmail() {
         return (U) email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void publishTweet(Tweet tweet) {
+        if (tweet != null) {
+            tweets.add(tweet);
+            for (CuentaUsuario follower : followers) {
+                follower.addToTimeline(tweet);
+            }
+        }
     }
 }
