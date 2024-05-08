@@ -7,7 +7,7 @@ public abstract class Tweet {
     protected String message;
     protected CuentaUsuario sender;
 
-    public Tweet(LocalDate time, CuentaUsuario message, CuentaUsuario sender) {
+    public Tweet(LocalDate time, String message, CuentaUsuario sender) {
         this.time = time;
         this.message = message;
         this.sender = sender;
