@@ -121,4 +121,8 @@ public class CuentaUsuario {
             timeline.add(dm);
         }
     }
+
+    public CuentaUsuario[] getFollowing() {
+            return new CuentaUsuario[0];
+    }
 }

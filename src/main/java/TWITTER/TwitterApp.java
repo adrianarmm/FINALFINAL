@@ -144,12 +144,21 @@ public class TwitterApp {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
             return;
         }
-        StringBuilder timeline = new StringBuilder();
+        StringBuilder timelineDetails = new StringBuilder();
+        timelineDetails.append("Timeline de ").append(currentUser.getAlias()).append(":\n");
+
         for (Tweet tweet : currentUser.getTimeline()) {
-            timeline.append(tweet.getText()).append(" - @").append(tweet.getUser().getAlias()).append("\n");
+            timelineDetails.append(tweet.getText()).append(" - @").append(tweet.getUser().getAlias()).append("\n");
         }
-        JOptionPane.showMessageDialog(null, timeline.toString(), "Timeline de " + currentUser.getAlias(), JOptionPane.INFORMATION_MESSAGE);
+
+        timelineDetails.append("\nSiguiendo a:\n");
+        for (CuentaUsuario user : currentUser.getFollowing()) {
+            timelineDetails.append(user.getAlias()).append(" (").append(user.getEmail()).append(")\n");
+        }
+
+        JOptionPane.showMessageDialog(null, timelineDetails.toString(), "Timeline y Seguimientos", JOptionPane.INFORMATION_MESSAGE);
     }
+
 
     private static void sendDirectMessage() {
         if (currentUser == null) {
