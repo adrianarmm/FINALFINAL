@@ -1,12 +1,11 @@
 package TWITTER;
 
-import java.time.LocalDate;
-
 public class DirectMessage extends Tweet {
     private CuentaUsuario receiver;
 
-    public DirectMessage(LocalDate time, String message, CuentaUsuario sender, CuentaUsuario receiver) {
-        super(message);
+    // Corrección del constructor para incluir sender en la llamada al constructor de la superclase.
+    public DirectMessage(String message, CuentaUsuario sender, CuentaUsuario receiver) {
+        super(message, sender);  // Se pasa el sender correctamente.
         this.receiver = receiver;
     }
 
@@ -17,9 +16,10 @@ public class DirectMessage extends Tweet {
     @Override
     public String toString() {
         return "DirectMessage{" +
-                "receiver=" + receiver.getAlias() +
+                "receiver='" + (receiver
+                != null ? receiver.getAlias() : "Unknown receiver") + '\'' +
                 ", message='" + getMessage() + '\'' +
-                ", sender=" + getSender().getAlias() +
+                ", sender='" + (getSender() != null ? getSender().getAlias() : "Unknown sender") + '\'' +
                 '}';
     }
 }
