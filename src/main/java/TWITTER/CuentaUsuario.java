@@ -64,7 +64,6 @@ public class CuentaUsuario {
     }
 
     public static void main(String[] args) {
-        public static void main(String[] args) {
             CuentaUsuario user1 = new CuentaUsuario("johnDoe", "johndoe@example.com");
             CuentaUsuario user2 = new CuentaUsuario("janeDoe", "janedoe@example.com");
             CuentaUsuario user3 = new CuentaUsuario("bobDoe", "bobdoe@example.com");
@@ -84,4 +83,3 @@ public class CuentaUsuario {
             }
         }
     }
-}
