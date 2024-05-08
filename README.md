@@ -109,6 +109,8 @@ b) El tipo de recursividad que se está empleando es la recursividad directa, ya
 La complejidad computacional del algoritmo es O(log n), ya que en cada iteración se divide el número entre 10, lo que significa que el número de iteraciones es proporcional al logaritmo en base 10 del número de dígitos del número de entrada. En cada iteración, se realiza una operación de módulo y una operación de suma, lo que significa que la complejidad temporal es O(log n). La complejidad espacial es O(log n), ya que se necesita espacio adicional en la pila de llamadas para cada llamada recursiva.
 
 
+## EJERCICIO 5 
+ANALISIS DETALLADO: 
 
 
 
