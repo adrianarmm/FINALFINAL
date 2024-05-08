@@ -55,13 +55,14 @@ public class TwitterApp {
         addButton("Enviar mensaje directo", panel, e -> sendDirectMessage());
         addButton("Ordenar usuarios por email", panel, e -> sortUsersByEmail());
 
-        frame.add(panel);
+        frame.getContentPane().add(panel, BorderLayout.CENTER);
         frame.setVisible(true);
     }
     private static void addButton(String text, JPanel panel, ActionListener actionListener) {
         JButton button = new JButton(text);
         button.addActionListener(actionListener);
         button.setBackground(new Color(173, 216, 230)); // Light blue color
+        button.setFont(new Font("Arial", Font.BOLD, 16)); // Fuente más grande para mejor legibilidad
         panel.add(button);
     }
 
