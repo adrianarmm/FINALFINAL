@@ -42,7 +42,7 @@ public class TwitterApp {
     private static void initializeGUI() {
         JFrame frame = new JFrame("Twitter App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 400);
+        frame.setSize(360, 640);
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(7, 1));
