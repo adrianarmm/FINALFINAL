@@ -84,4 +84,7 @@ public class CuentaUsuario {
         }
 
 
+    public <U> U getEmail() {
+        return (U) email;
+    }
 }
