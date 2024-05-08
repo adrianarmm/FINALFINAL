@@ -1,13 +1,28 @@
 package TWITTER;
 
-public class Tweet {
-    private String text;
+import java.time.LocalDate;
 
-    public Tweet(String text) {
-        this.text = text;
+public abstract class Tweet {
+    private LocalDate time;
+    private CuentaUsuario sender;
+    private String message;
+
+    public Tweet(LocalDate time, CuentaUsuario sender, String message) {
+        this.time = time;
+        this.sender = sender;
+        this.message = message;
     }
 
-    public String getText() {
-        return text;
+    public LocalDate getTime() {
+        return time;
     }
+
+    public CuentaUsuario getSender() {
+        return sender;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
 }
