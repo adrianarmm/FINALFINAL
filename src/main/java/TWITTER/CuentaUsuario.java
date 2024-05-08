@@ -12,6 +12,9 @@ public class CuentaUsuario {
     private List<Tweet> timeline;
 
     public CuentaUsuario(String alias, String email) {
+        if (!Utils.isValidAlias(alias) || !Utils.isValidEmail(email)) {
+            throw new IllegalArgumentException("Invalid alias or email");
+        }
         this.alias = alias;
         this.email = email;
         this.tweets = new ArrayList<>();
@@ -27,8 +30,10 @@ public class CuentaUsuario {
         }
     }
 
-    public void addFollower(CuentaUsuario user) {
-        followers.add(user);
+    private void addFollower(CuentaUsuario user) {
+        if (!followers.contains(user)) {
+            followers.add(user);
+        }
     }
 
     public void tweet(Tweet tweet) {
@@ -38,21 +43,15 @@ public class CuentaUsuario {
         }
     }
 
-    public void addToTimeline(Tweet tweet) {
+    private void addToTimeline(Tweet tweet) {
         timeline.add(tweet);
     }
 
-    public String getAlias() {
-        return alias;
+    @Override
+    public String toString() {
+        return "UserAccount{" +
+                "alias='" + alias + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public static void main(String[] args) {
-        CuentaUsuario user1 = new CuentaUsuario("user1", "areyemor@myuax.com");
-
-    }
-
 }
