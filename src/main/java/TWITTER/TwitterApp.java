@@ -3,6 +3,7 @@ package TWITTER;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.util.Optional;
 
 public class TwitterApp {
@@ -34,13 +35,13 @@ public class TwitterApp {
     }
 
     private static void registerOwner() {
-        ImageIcon icon = new ImageIcon(TwitterApp.class.getResource("/Users/adrianareyesmorera/Downloads/pajarito.png")); // Asegúrate de cambiar la ruta
+        URL iconURL =TwitterApp.class.getResource("/Users/adrianareyesmorera/Downloads/pajarito.png"); // Asegúrate de cambiar la ruta
         JOptionPane.showMessageDialog(
                 null,
                 "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.",
                 "Bienvenida",
                 JOptionPane.INFORMATION_MESSAGE,
-                icon
+new ImageIcon(iconURL)
         );
         addUser(true);
     }
