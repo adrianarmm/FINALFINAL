@@ -43,3 +43,33 @@ En cuanto a las operaciones posibles, una tabla hash soporta la inserción, bús
 En resumen, tanto las tablas hash como los árboles son estructuras de datos útiles, pero se utilizan en diferentes situaciones y para diferentes propósitos. La elección entre ellas depende del problema que se esté resolviendo y de las operaciones que se vayan a realizar con más frecuencia.
 
 **PARTE 3**
+
+Una pila y una cola son tipos abstractos de datos que almacenan colecciones de elementos, pero difieren en la forma en que se agregan y eliminan elementos.
+
+Una pila sigue el principio Last-In-First-Out (LIFO), lo que significa que el último elemento agregado a la pila es el primero en eliminarse. Una pila tiene dos operaciones principales: empujar y sacar. La operación empujar agrega un elemento a la parte superior de la pila, y la operación sacar elimina el elemento superior de la pila. La complejidad temporal de las operaciones empujar y sacar en una pila es O(1), lo que significa que toman tiempo constante para ejecutarse.
+
+Por otro lado, una cola sigue el principio First-In-First-Out (FIFO), lo que significa que el primer elemento agregado a la cola es el primero en eliminarse. Una cola tiene dos operaciones principales: encolar y desencolar. La operación encolar agrega un elemento a la parte posterior de la cola, y la operación desencolar elimina el elemento frontal de la cola. La complejidad temporal de las operaciones encolar y desencolar en una cola también es O(1), lo que significa que toman tiempo constante para ejecutarse.
+
+La elección entre el uso de una pila o una cola depende del problema específico que debe resolverse. Por ejemplo, una pila es útil para tareas que involucran deshacer operaciones, como en un editor de texto, donde el usuario puede deshacer su última acción mediante la eliminación del último elemento de la pila. Una cola es útil para tareas que involucran procesar elementos en el orden en que fueron recibidos, como en una cola de impresión, donde los trabajos se imprimen en el orden en que se enviaron.
+
+En términos de complejidad espacial, una pila y una cola requieren ambas O(n) espacio para almacenar n elementos. Sin embargo, una pila suele usar menos memoria que una cola porque solo necesita realizar un seguimiento del elemento superior, mientras que una cola necesita realizar un seguimiento tanto del elemento frontal como del elemento posterior.
+
+En resumen, una pila y una cola son ambas estructuras de datos útiles, pero difieren en la forma en que se agregan y eliminan elementos. Una pila sigue el principio LIFO y es útil para tareas que involucran deshacer operaciones, mientras que una cola sigue el principio FIFO y es útil para tareas que involucran procesar elementos en el orden en que fueron recibidos. Tanto una pila como una cola tienen una complejidad temporal de O(1) para sus operaciones principales y una complejidad espacial de O(n). La elección entre usar una pila o una cola depende del problema específico que debe resolverse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
