@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="54">
-      <change beforePath="$PROJECT_DIR$/src/main/java/TWITTER/TwitterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TWITTER/TwitterApp.java" afterDir="false" />
-    </list>
+    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="57" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,31 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715153505674</updated>
-      <workItem from="1715153506764" duration="3928000" />
-    </task>
-    <task id="LOCAL-00007" summary="7">
-      <option name="closed" value="true" />
-      <created>1715154321221</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1715154321221</updated>
-    </task>
-    <task id="LOCAL-00008" summary="8 creacion clase">
-      <option name="closed" value="true" />
-      <created>1715154345319</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1715154345319</updated>
-    </task>
-    <task id="LOCAL-00009" summary="9">
-      <option name="closed" value="true" />
-      <created>1715154366328</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1715154366328</updated>
+      <workItem from="1715153506764" duration="4234000" />
     </task>
     <task id="LOCAL-00010" summary="10">
       <option name="closed" value="true" />
@@ -460,16 +434,37 @@
       <option name="project" value="LOCAL" />
       <updated>1715157330976</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="55">
+      <option name="closed" value="true" />
+      <created>1715157633999</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1715157633999</updated>
+    </task>
+    <task id="LOCAL-00057" summary="56">
+      <option name="closed" value="true" />
+      <created>1715157651370</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1715157651370</updated>
+    </task>
+    <task id="LOCAL-00058" summary="57">
+      <option name="closed" value="true" />
+      <created>1715157670815</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1715157670815</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="30" />
-    <MESSAGE value="31" />
-    <MESSAGE value="32" />
     <MESSAGE value="33" />
     <MESSAGE value="34" />
     <MESSAGE value="35" />
@@ -492,6 +487,9 @@
     <MESSAGE value="52" />
     <MESSAGE value="53" />
     <MESSAGE value="54" />
-    <option name="LAST_COMMIT_MESSAGE" value="54" />
+    <MESSAGE value="55" />
+    <MESSAGE value="56" />
+    <MESSAGE value="57" />
+    <option name="LAST_COMMIT_MESSAGE" value="57" />
   </component>
 </project>

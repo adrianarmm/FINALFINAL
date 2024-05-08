@@ -10,12 +10,14 @@ public class TwitterApp {
     private static CuentaUsuario currentUser;
 
     public static void main(String[] args) {
-        userManager = new UserManager();
-        userManager.loadUsersFromFile("users.txt");
+
 
         JFrame frame = new JFrame("Twitter App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
+
+        userManager = new UserManager();
+        userManager.addUser("user1", "areyemor@myuax.com");
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(6, 1));

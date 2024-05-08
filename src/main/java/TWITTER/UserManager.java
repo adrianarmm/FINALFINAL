@@ -1,37 +1,24 @@
 package TWITTER;
 
-import TWITTER.CuentaUsuario;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class UserManager {
-    private List<CuentaUsuario> users;
+    private List<CuentaUsuario> users = new ArrayList<>();
     private CuentaUsuario currentUser;
 
-    public void loadUsersFromFile(String fileName) {
-        users = new ArrayList<>();
+    public UserManager() {
+        // Constructor que inicializa la lista vacía.
+    }
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length >= 2) {
-                    String name = parts[0];
-                    String email = parts[1];
-
-                    CuentaUsuario user = new CuentaUsuario(name, email);
-                    users.add(user);
-                }
-            }
-        } catch (IOException e) {
-            System.err.println("Error leyendo el fichero de usuarios.");
-            e.printStackTrace();
+    public void addUser(String alias, String email) {
+        if (Utils.isValidAlias(alias) && Utils.isValidEmail(email)) {
+            CuentaUsuario newUser = new CuentaUsuario(alias, email);
+            users.add(newUser);
+        } else {
+            throw new IllegalArgumentException("Alias o email no válido.");
         }
     }
 
@@ -45,7 +32,7 @@ public class UserManager {
     }
 
     public void setCurrentUser(CuentaUsuario user) {
-        currentUser = user;
+        this.currentUser = user;
     }
 
     public CuentaUsuario getCurrentUser() {
