@@ -2,6 +2,7 @@ package TWITTER;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Optional;
 
 public class TwitterApp {
     private static UserManager userManager;
@@ -153,7 +154,7 @@ public class TwitterApp {
 
         timelineDetails.append("\nSiguiendo a:\n");
         for (CuentaUsuario user : currentUser.getFollowing()) {
-            timelineDetails.append(user.getAlias()).append(" (").append(user.getEmail()).append(")\n");
+            timelineDetails.append(user.getAlias()).append(" (").append(Optional.ofNullable(user.getEmail())).append(")\n");
         }
 
         JOptionPane.showMessageDialog(null, timelineDetails.toString(), "Timeline y Seguimientos", JOptionPane.INFORMATION_MESSAGE);
