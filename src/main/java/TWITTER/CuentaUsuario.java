@@ -109,4 +109,16 @@ public class CuentaUsuario {
     public Tweet[] getTimeline() {
         return timeline.toArray(new Tweet[0]);
     }
+
+    public void sendDirectMessage(DirectMessage dm) {
+        if (dm != null) {
+            dm.getReceiver().receiveDirectMessage(dm);
+        }
+    }
+
+    private void receiveDirectMessage(DirectMessage dm) {
+        if (dm != null) {
+            timeline.add(dm);
+        }
+    }
 }
