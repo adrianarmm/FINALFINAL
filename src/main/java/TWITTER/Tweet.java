@@ -7,6 +7,7 @@ public class Tweet {
     private String message;
     private CuentaUsuario sender;
     private boolean text;
+    private CuentaUsuario user;
 
     public Tweet(String message, CuentaUsuario sender) {
         this.time = LocalDate.now(); // Asumimos que la fecha del tweet es la actual.
@@ -41,5 +42,13 @@ public class Tweet {
 
     public void setText(boolean text) {
         this.text = text;
+    }
+
+    public CuentaUsuario getUser() {
+        return user;
+    }
+
+    public void setUser(CuentaUsuario user) {
+        this.user = user;
     }
 }
