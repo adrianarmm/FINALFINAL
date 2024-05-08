@@ -21,11 +21,13 @@ public class UserManager {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
-                String name =parts[0];
-                String email = parts[1];
+                if (parts.length >= 2) {
+                    String name = parts[0];
+                    String email = parts[1];
 
-                CuentaUsuario user = new CuentaUsuario(name, email);
-                users.add(user);
+                    CuentaUsuario user = new CuentaUsuario(name, email);
+                    users.add(user);
+                }
             }
         } catch (IOException e) {
             System.err.println("Error leyendo el fichero de usuarios.");
@@ -54,4 +56,3 @@ public class UserManager {
         Collections.sort(users, Comparator.comparing(CuentaUsuario::getEmail));
     }
 }
-
