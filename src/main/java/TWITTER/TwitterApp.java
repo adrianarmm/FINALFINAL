@@ -63,15 +63,37 @@ public class TwitterApp {
 
     private static void loadUser() {
         String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario a cargar:");
-        CuentaUsuario user = userManager.findUserByEmail(email);
+        if (!Utils.isValidEmail(email)) {
+            JOptionPane.showMessageDialog(null, "Email no válido.");
+            return;
+        }
 
+        CuentaUsuario user = userManager.findUserByEmail(email);
         if (user == null) {
-            JOptionPane.showMessageDialog(null, "No se encontró ningún usuario con ese email.");
+            // Si no se encuentra el usuario, preguntar si desea crear uno nuevo.
+            int result = JOptionPane.showConfirmDialog(null, "El usuario no existe. ¿Desea crear un nuevo usuario con este email?", "Usuario no encontrado", JOptionPane.YES_NO_OPTION);
+            if (result == JOptionPane.YES_OPTION) {
+                String alias = JOptionPane.showInputDialog(null, "Introduzca el alias del nuevo usuario:");
+                if (!Utils.isValidAlias(alias)) {
+                    JOptionPane.showMessageDialog(null, "Alias no válido.");
+                    return;
+                }
+                try {
+                    userManager.addUser(alias, email);
+                    user = userManager.findUserByEmail(email);  // Vuelve a buscar el usuario recién creado
+                    currentUser = user;
+                    JOptionPane.showMessageDialog(null, "Nuevo usuario creado y cargado: " + user.getAlias());
+                } catch (IllegalArgumentException ex) {
+                    JOptionPane.showMessageDialog(null, "Error al registrar usuario: " + ex.getMessage());
+                }
+            }
         } else {
             currentUser = user;
             JOptionPane.showMessageDialog(null, "Usuario cargado: " + user.getAlias());
         }
     }
+
+
 
     private static void publishTweet() {
         if (currentUser == null) {
