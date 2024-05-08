@@ -184,12 +184,7 @@ public class TwitterApp {
     }
 
     private static void sortUsersByEmail(BlockCodeBuilderImpl users) {
-        if (currentUser == null) {
-            JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
-            return;
-        }
         userManager.sortUsersByEmail();
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
     }
-
 }

@@ -126,7 +126,7 @@ public class CuentaUsuario {
             return new CuentaUsuario[0];
     }
 
-    public static <U> U getEmail(Object o) {
-            return null;
+    public void setFollowing(List<CuentaUsuario> following) {
+        this.following = following;
     }
 }
