@@ -1,20 +1,17 @@
 package TWITTER;
 
-import jdk.internal.classfile.impl.BlockCodeBuilderImpl;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Optional;
 
 public class TwitterApp {
     private static UserManager userManager;
     private static CuentaUsuario currentUser;
+    private static Optional<Object> Optional;
 
     public static void main(String[] args) {
         userManager = new UserManager();
-        // userManager.loadUsersFromFile("users.txt"); // Ya no se necesita
 
         JFrame frame = new JFrame("Twitter App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,8 +45,7 @@ public class TwitterApp {
         panel.add(sendMessageButton);
 
         JButton sortUsersByEmailButton = new JButton("Ordenar usuarios por email");
-        BlockCodeBuilderImpl users = null;
-        sortUsersByEmailButton.addActionListener(e -> sortUsersByEmail(users));
+        sortUsersByEmailButton.addActionListener(e -> sortUsersByEmail());
         panel.add(sortUsersByEmailButton);
 
         frame.add(panel);
@@ -66,6 +62,7 @@ public class TwitterApp {
             JOptionPane.showMessageDialog(null, "Error al registrar usuario: " + ex.getMessage());
         }
     }
+
 
     private static void loadUser() {
         String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario a cargar:");
@@ -183,8 +180,9 @@ public class TwitterApp {
         JOptionPane.showMessageDialog(null, "Mensaje enviado a: " + receiver.getAlias());
     }
 
-    private static void sortUsersByEmail(BlockCodeBuilderImpl users) {
+    private static void sortUsersByEmail() {
         userManager.sortUsersByEmail();
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
     }
+
 }
