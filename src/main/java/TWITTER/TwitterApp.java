@@ -35,7 +35,7 @@ public class TwitterApp {
     }
 
     private static void registerOwner() {
-        ImageIcon icon = new ImageIcon("/Users/adrianareyesmorera/Escritorio/pt.png"); // Asegúrate de cambiar la ruta
+        ImageIcon icon = new ImageIcon("/Users/adrianareyesmorera/Escritorio/larry-el-pajaro-de-twitter.png"); // Asegúrate de cambiar la ruta
         JOptionPane.showMessageDialog(
                 null,
                 "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.",
