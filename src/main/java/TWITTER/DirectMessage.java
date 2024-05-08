@@ -1,4 +1,6 @@
-package TWITTER;
+import TWITTER.CuentaUsuario;
+import TWITTER.Tweet;
+Package TWITTER;
 
 public class DirectMessage extends Tweet {
     private CuentaUsuario receiver;
@@ -21,6 +23,11 @@ public class DirectMessage extends Tweet {
                 ", message='" + getMessage() + '\'' +
                 ", sender='" + (getSender() != null ? getSender().getAlias() : "Unknown sender") + '\'' +
                 '}';
+    }
+
+    // Delegate method to get the message from the superclass.
+    public String getMessage() {
+        return super.getMessage();
     }
 
     public static void main(String[] args) {
