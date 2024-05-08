@@ -40,6 +40,6 @@ public class UserManager {
     }
 
     public void sortUsersByEmail() {
-        Collections.sort(users, Comparator.comparing(CuentaUsuario::getEmail));
+        Collections.sort(users, Comparator.comparing(cuentaUsuario -> cuentaUsuario.getEmail()));
     }
 }
