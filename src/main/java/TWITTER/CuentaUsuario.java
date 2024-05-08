@@ -68,7 +68,7 @@ public class CuentaUsuario {
             Tweet tweet1 = new Tweet("Bienvenido a Twitter", user1);
             user2.tweet(tweet1);
 
-            System.out.println(user1.getAlias() + "'s timeline:");
+            System.out.println(user1.getAlias() + "Bienvenido a Twitter");
             for (Tweet tweet : user1.timeline) {
                 System.out.println(tweet.getText());
             }
