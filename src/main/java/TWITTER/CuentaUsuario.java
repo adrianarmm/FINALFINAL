@@ -124,4 +124,8 @@ public class CuentaUsuario {
     public void setFollowing(List<CuentaUsuario> following) {
         this.following = following;
     }
+
+    public static <U> U getEmail(Object o) {
+        return (U) email;
+    }
 }

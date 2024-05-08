@@ -1,4 +1,4 @@
-package TWITTER;
+ package TWITTER;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,23 +35,18 @@ public class TwitterApp {
     }
 
     private static void registerOwner() {
-        ImageIcon icon = new ImageIcon("/Users/adrianareyesmorera/Escritorio/pt.png");
-        if (icon.getImageLoadStatus() != MediaTracker.COMPLETE) {
-            System.out.println("Error cargando la imagen");
-        } else {
-            JOptionPane.showMessageDialog(
-                    null,
-                    "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.",
-                    "Bienvenida",
-                    JOptionPane.INFORMATION_MESSAGE,
-                    icon
-            );
+        ImageIcon icon = new ImageIcon("/Users/adrianareyesmorera/Escritorio/pt.png"); // Asegúrate de cambiar la ruta
+        JOptionPane.showMessageDialog(
+                null,
+                "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.",
+                "Bienvenida",
+                JOptionPane.INFORMATION_MESSAGE,
+                icon
+        );
+        addUser(true);
+    }
 
-            userManager.addUser(true);
-        }
-
-
-        private static void initializeGUI() {
+    private static void initializeGUI() {
         JFrame frame = new JFrame("Twitter App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(360, 640);
@@ -201,5 +196,3 @@ public class TwitterApp {
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
     }
 }
-
-
