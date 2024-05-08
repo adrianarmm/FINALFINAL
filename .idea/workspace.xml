@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="72" />
+    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="76" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,39 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715153505674</updated>
-      <workItem from="1715153506764" duration="5824000" />
-    </task>
-    <task id="LOCAL-00025" summary="25">
-      <option name="closed" value="true" />
-      <created>1715155434530</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1715155434530</updated>
-    </task>
-    <task id="LOCAL-00026" summary="26">
-      <option name="closed" value="true" />
-      <created>1715155466602</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1715155466602</updated>
-    </task>
-    <task id="LOCAL-00027" summary="27">
-      <option name="closed" value="true" />
-      <created>1715155642223</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1715155642223</updated>
-    </task>
-    <task id="LOCAL-00028" summary="28">
-      <option name="closed" value="true" />
-      <created>1715155667155</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1715155667155</updated>
+      <workItem from="1715153506764" duration="6169000" />
     </task>
     <task id="LOCAL-00029" summary="29">
       <option name="closed" value="true" />
@@ -458,17 +426,45 @@
       <option name="project" value="LOCAL" />
       <updated>1715159300766</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="73">
+      <option name="closed" value="true" />
+      <created>1715159479679</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159479679</updated>
+    </task>
+    <task id="LOCAL-00075" summary="74">
+      <option name="closed" value="true" />
+      <created>1715159640295</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159640295</updated>
+    </task>
+    <task id="LOCAL-00076" summary="75">
+      <option name="closed" value="true" />
+      <created>1715159657225</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159657225</updated>
+    </task>
+    <task id="LOCAL-00077" summary="76">
+      <option name="closed" value="true" />
+      <created>1715159679834</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159679834</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="48" />
-    <MESSAGE value="49" />
-    <MESSAGE value="50" />
-    <MESSAGE value="51" />
     <MESSAGE value="52" />
     <MESSAGE value="53" />
     <MESSAGE value="54" />
@@ -490,6 +486,10 @@
     <MESSAGE value="70" />
     <MESSAGE value="71" />
     <MESSAGE value="72" />
-    <option name="LAST_COMMIT_MESSAGE" value="72" />
+    <MESSAGE value="73" />
+    <MESSAGE value="74" />
+    <MESSAGE value="75" />
+    <MESSAGE value="76" />
+    <option name="LAST_COMMIT_MESSAGE" value="76" />
   </component>
 </project>
