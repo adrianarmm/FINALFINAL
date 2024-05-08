@@ -13,7 +13,7 @@ public class CuentaUsuario {
 
     public CuentaUsuario(String alias, String email) {
         if (!Utils.isValidAlias(alias) || !Utils.isValidEmail(email)) {
-            throw new IllegalArgumentException("Invalid alias or email");
+            throw new IllegalArgumentException("Nombre de usuario o email no válido");
         }
         this.alias = alias;
         this.email = email;
