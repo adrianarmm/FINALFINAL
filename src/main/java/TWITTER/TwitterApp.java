@@ -90,15 +90,32 @@ public class TwitterApp {
             return;
         }
         String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario a seguir:");
-        CuentaUsuario userToFollow = userManager.findUserByEmail(email);
-
-        if (userToFollow == null) {
-            JOptionPane.showMessageDialog(null, "Usuario no encontrado.");
-        } else {
-            currentUser.follow(userToFollow);
-            JOptionPane.showMessageDialog(null, "Ahora sigues a: " + userToFollow.getAlias());
+        if (!Utils.isValidEmail(email)) {
+            JOptionPane.showMessageDialog(null, "Email no válido.");
+            return;
         }
+
+        CuentaUsuario userToFollow = userManager.findUserByEmail(email);
+        if (userToFollow == null) {
+            int reply = JOptionPane.showConfirmDialog(null, "No se encontró al usuario. ¿Desea añadirlo?", "Usuario no encontrado", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
+                String alias = JOptionPane.showInputDialog(null, "Introduzca el alias del nuevo usuario:");
+                if (!Utils.isValidAlias(alias)) {
+                    JOptionPane.showMessageDialog(null, "Alias no válido.");
+                    return;
+                }
+                userManager.addUser(alias, email);
+                userToFollow = userManager.findUserByEmail(email);
+            } else {
+                return;
+            }
+        }
+
+        currentUser.follow(userToFollow);
+        JOptionPane.showMessageDialog(null, "Ahora sigues a: " + userToFollow.getAlias());
     }
+
+
 
     private static void viewTimeline() {
         if (currentUser == null) {
