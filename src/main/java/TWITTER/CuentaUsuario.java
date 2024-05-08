@@ -24,7 +24,7 @@ public class CuentaUsuario {
     }
 
     public void follow(CuentaUsuario user) {
-        if (!following.contains(user)) {
+        if (user != null && !this.equals(user) && !following.contains(user)) {
             following.add(user);
             user.addFollower(this);
         }
@@ -37,19 +37,23 @@ public class CuentaUsuario {
     }
 
     public void tweet(Tweet tweet) {
-        tweets.add(tweet);
-        for (CuentaUsuario follower : followers) {
-            follower.addToTimeline(tweet);
+        if (tweet != null) {
+            tweets.add(tweet);
+            for (CuentaUsuario follower : followers) {
+                follower.addToTimeline(tweet);
+            }
         }
     }
 
     private void addToTimeline(Tweet tweet) {
-        timeline.add(tweet);
+        if (tweet != null) {
+            timeline.add(tweet);
+        }
     }
 
     @Override
     public String toString() {
-        return "UserAccount{" +
+        return "CuentaUsuario{" +
                 "alias='" + alias + '\'' +
                 ", email='" + email + '\'' +
                 '}';
@@ -59,18 +63,18 @@ public class CuentaUsuario {
         return alias;
     }
 
-        public static void main(String[] args) {
-            CuentaUsuario user1 = new CuentaUsuario("johnDoe", "johndoe@example.com");
-            CuentaUsuario user2 = new CuentaUsuario("janeDoe", "janedoe@example.com");
+    public static void main(String[] args) {
+        CuentaUsuario user1 = new CuentaUsuario("johnDoe", "johndoe@example.com");
+        CuentaUsuario user2 = new CuentaUsuario("janeDoe", "janedoe@example.com");
 
-            user1.follow(user2);
+        user1.follow(user2);
 
-            Tweet tweet1 = new Tweet("Bienvenido a Twitter", user1);
-            user2.tweet(tweet1);
+        Tweet tweet1 = new Tweet("Bienvenido a Twitter: ");
+        user2.tweet(tweet1);
 
-            System.out.println(user1.getAlias() + "  Bienvenido a Twitter");
-            for (Tweet tweet : user1.timeline) {
-                System.out.println(tweet.getText());
-            }
+        System.out.println(user1.getAlias() + " - Tweets en su timeline:");
+        for (Tweet tweet : user1.timeline) {
+            System.out.println(tweet.getText());
         }
     }
+}

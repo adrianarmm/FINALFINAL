@@ -7,7 +7,7 @@ public class Tweet {
     protected String message;
     protected CuentaUsuario sender;
 
-    public Tweet(String message, CuentaUsuario sender) {
+    public Tweet(String message) {
         this.time = time;
         this.message = message;
         this.sender = sender;
