@@ -1,9 +1,7 @@
 package TWITTER;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 public class UserManager {
     private List<CuentaUsuario> users = new ArrayList<>();
@@ -40,6 +38,6 @@ public class UserManager {
     }
 
     public void sortUsersByEmail() {
-        Collections.sort(users, Comparator.comparing(cuentaUsuario -> cuentaUsuario.getEmail()));
+        Collections.sort(users, Comparator.comparing(CuentaUsuario::getEmail));
     }
 }
