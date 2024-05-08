@@ -1,11 +1,15 @@
 public class SUMADIGITOS {
     public static void main(String[] args) {
-        int number = 102;
+        int number = -102;
         int sum = SUMADIGITOS(number);
-        System.out.println("La suma de numeros  " + number + " es " + sum);
+        System.out.println(" La suma de numeros " + number + " es" + sum);
     }
 
     public static int SUMADIGITOS(int number) {
+        if (number < 0) {
+            number = -number;
+        }
+
         if (number < 10) {
             return number;
         } else {
