@@ -1,13 +1,11 @@
 package TWITTER;
 
-
-import java.time.LocalDate;
-
 public class Retweet extends Tweet {
     private Tweet originalTweet;
 
-    public Retweet(LocalDate time, String message, CuentaUsuario sender, Tweet originalTweet) {
-        super(message);
+    // Corrección del constructor para incluir sender en la llamada al constructor de la superclase.
+    public Retweet(String message, CuentaUsuario sender, Tweet originalTweet) {
+        super(message, sender);  // Se pasa el sender correctamente.
         this.originalTweet = originalTweet;
     }
 
@@ -18,9 +16,9 @@ public class Retweet extends Tweet {
     @Override
     public String toString() {
         return "Retweet{" +
-                "originalTweet=" + originalTweet.getMessage() +
+                "originalTweet='" + (originalTweet != null ? originalTweet.getMessage() : "No original message") + '\'' +
                 ", message='" + getMessage() + '\'' +
-                ", sender=" + getSender().getAlias() +
+                ", sender='" + (getSender() != null ? getSender().getAlias() : "Unknown sender") + '\'' +
                 '}';
     }
 }
