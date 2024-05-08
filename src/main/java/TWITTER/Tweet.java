@@ -1,13 +1,11 @@
 package TWITTER;
-
-
 public class Tweet {
     private String text;
-    private CuentaUsuario user;
+    private CuentaUsuario user; // The user who created the tweet.
 
-    public Tweet(String text) {
+    public Tweet(String text, CuentaUsuario user) {
         this.text = text;
-        this.user = user;
+        this.user = user; // Ensure the user is set here.
     }
 
     public String getText() {
@@ -16,9 +14,5 @@ public class Tweet {
 
     public CuentaUsuario getUser() {
         return user;
-    }
-
-    protected String getMessage() {
-            return text;
     }
 }
