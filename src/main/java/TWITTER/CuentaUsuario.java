@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CuentaUsuario {
     private String alias;
-    private String email;
+    private static String email;
     private List<Tweet> tweets;
     private List<CuentaUsuario> following;
     private List<CuentaUsuario> followers;
