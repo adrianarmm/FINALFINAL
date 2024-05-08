@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Retweet extends Tweet {
     private Tweet originalTweet;
 
-    public Retweet(LocalDate time, String message, CuentaUsuario sender, Tweet originalTweet) {
+    public Retweet(LocalDate time, CuentaUsuario message, CuentaUsuario sender, Tweet originalTweet) {
         super(time, message, sender);
         this.originalTweet = originalTweet;
     }
