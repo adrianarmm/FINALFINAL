@@ -77,7 +77,7 @@ public class CuentaUsuario {
             user2.tweet(tweet1);
             user3.tweet(tweet2);
 
-            System.out.println("Timeline de " + user1.getAlias() + ":");
+            System.out.println("Tweets de " + user1.getAlias() + ":");
             for (Tweet tweet : user1.timeline) {
                 System.out.println(tweet.getText() + " - @" + tweet.getUser().getAlias());
             }
