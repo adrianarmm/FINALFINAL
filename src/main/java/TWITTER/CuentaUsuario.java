@@ -72,11 +72,6 @@ public class CuentaUsuario {
             user1.follow(user2);
             user1.follow(user3);
 
-            Tweet tweet1 = new Tweet("Hello, world!");
-            Tweet tweet2 = new Tweet("This is my second tweet!");
-
-            user2.tweet(tweet1);
-            user3.tweet(tweet2);
 
             System.out.println("Tweets de " + user1.getAlias() + ":");
             for (Tweet tweet : user1.timeline) {
