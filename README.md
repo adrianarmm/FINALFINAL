@@ -56,6 +56,22 @@ En términos de complejidad espacial, una pila y una cola requieren ambas O(n) e
 
 En resumen, una pila y una cola son ambas estructuras de datos útiles, pero difieren en la forma en que se agregan y eliminan elementos. Una pila sigue el principio LIFO y es útil para tareas que involucran deshacer operaciones, mientras que una cola sigue el principio FIFO y es útil para tareas que involucran procesar elementos en el orden en que fueron recibidos. Tanto una pila como una cola tienen una complejidad temporal de O(1) para sus operaciones principales y una complejidad espacial de O(n). La elección entre usar una pila o una cola depende del problema específico que debe resolverse.
 
+**PARTE 4**
+EL CODIGO ESTA EN LA CARPETA
+En cada iteración, el algoritmo selecciona un elemento de la lista desordenada y lo compara con los elementos anteriores en la lista ordenada. Si el elemento seleccionado es menor que el elemento anterior en la lista ordenada, se mueven los elementos anteriores a la derecha para hacer espacio para el elemento seleccionado. El proceso continúa hasta que el elemento seleccionado esté en su lugar correcto en la lista ordenada.
+
+La complejidad temporal del algoritmo de ordenación por inserción es O(n^2), donde n es el número de elementos en la lista. La complejidad espacial es O(1), ya que solo se requiere una cantidad fija de espacio adicional para realizar el algoritmo.
+
+A continuación, se muestran las iteraciones sobre el conjunto de datos proporcionado:
+
+Después de la primera iteración, el array es [20, 50, 13, 22, 16, 89, 85, 84].
+Después de la segunda iteración, el array es [13, 20, 50, 22, 16, 89, 85, 84].
+Después de la tercera iteración, el array es [13, 20, 16, 22, 50, 89, 85, 84].
+Después de la cuarta iteración, el array es [13, 16, 20, 22, 50, 89, 85, 84].
+Después de la quinta iteración, el array es [13, 16, 20, 22, 50, 85, 89, 84].
+Después de la sexta iteración, el array es [13, 16, 20, 22, 50, 84, 85, 89].
+Después de la séptima iteración, el array es [13, 16, 20, 22, 50, 84, 85, 89].
+Por lo tanto, el array ordenado es [13, 16, 20, 22, 50, 84, 85, 89].
 
 
 
