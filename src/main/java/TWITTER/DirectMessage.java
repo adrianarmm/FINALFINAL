@@ -1,8 +1,5 @@
 package TWITTER;
 
-import TWITTER.CuentaUsuario;
-import TWITTER.Tweet;
-
 
 public class DirectMessage extends Tweet {
     private CuentaUsuario receiver;
@@ -10,7 +7,7 @@ public class DirectMessage extends Tweet {
 
     // Corrección del constructor para incluir sender en la llamada al constructor de la superclase.
     public DirectMessage(String message, CuentaUsuario sender, CuentaUsuario receiver) {
-        super(message, sender);  // Se pasa el sender correctamente.
+        super(message);  // Se pasa el sender correctamente.
         this.receiver = receiver;
     }
 

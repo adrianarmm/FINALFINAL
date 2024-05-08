@@ -1,13 +1,11 @@
 package TWITTER;
-import TWITTER.CuentaUsuario;
-import TWITTER.Tweet;
 
 public class Retweet extends Tweet {
     private Tweet originalTweet;
 
     // Corrección del constructor para incluir sender en la llamada al constructor de la superclase.
     public Retweet(String message, CuentaUsuario sender, Tweet originalTweet) {
-        super(message, sender);  // Se pasa el sender correctamente.
+        super(message);  // Se pasa el sender correctamente.
         this.originalTweet = originalTweet;
     }
 
