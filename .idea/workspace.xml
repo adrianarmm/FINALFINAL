@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="41">
-      <change beforePath="$PROJECT_DIR$/src/main/java/TWITTER/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TWITTER/Tweet.java" afterDir="false" />
+    <list default="true" id="10d1b66c-aeca-4d75-992d-8097bc9f40cd" name="Changes" comment="44">
+      <change afterPath="$PROJECT_DIR$/src/main/java/TWITTER/UserManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715153505674</updated>
-      <workItem from="1715153506764" duration="2855000" />
+      <workItem from="1715153506764" duration="3241000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -394,16 +394,45 @@
       <option name="project" value="LOCAL" />
       <updated>1715156283487</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="42">
+      <option name="closed" value="true" />
+      <created>1715156406537</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1715156406537</updated>
+    </task>
+    <task id="LOCAL-00043" summary="42">
+      <option name="closed" value="true" />
+      <created>1715156466287</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1715156466287</updated>
+    </task>
+    <task id="LOCAL-00044" summary="43">
+      <option name="closed" value="true" />
+      <created>1715156522157</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1715156522157</updated>
+    </task>
+    <task id="LOCAL-00045" summary="44">
+      <option name="closed" value="true" />
+      <created>1715156555060</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1715156555060</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="17" />
-    <MESSAGE value="18 MEJORA Tweet" />
-    <MESSAGE value="19" />
     <MESSAGE value="20" />
     <MESSAGE value="21" />
     <MESSAGE value="22" />
@@ -426,6 +455,9 @@
     <MESSAGE value="39" />
     <MESSAGE value="40" />
     <MESSAGE value="41" />
-    <option name="LAST_COMMIT_MESSAGE" value="41" />
+    <MESSAGE value="42" />
+    <MESSAGE value="43" />
+    <MESSAGE value="44" />
+    <option name="LAST_COMMIT_MESSAGE" value="44" />
   </component>
 </project>
