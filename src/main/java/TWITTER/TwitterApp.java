@@ -10,8 +10,17 @@ public class TwitterApp {
 
     public static void main(String[] args) {
         userManager = new UserManager();
-        // userManager.loadUsersFromFile("users.txt"); // Ya no se necesita
+        registerOwner();
+        initializeGUI();
+    }
 
+    private static void registerOwner() {
+        // Solicitar la creación del dueño de la cuenta al inicio.
+        JOptionPane.showMessageDialog(null, "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.");
+        addUser(true);
+    }
+
+    private static void initializeGUI() {
         JFrame frame = new JFrame("Twitter App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
@@ -20,7 +29,7 @@ public class TwitterApp {
         panel.setLayout(new GridLayout(7, 1));
 
         JButton addUserButton = new JButton("Registrar nuevo usuario");
-        addUserButton.addActionListener(e -> addUser());
+        addUserButton.addActionListener(e -> addUser(false));
         panel.add(addUserButton);
 
         JButton loadUserButton = new JButton("Cargar usuario en memoria");
@@ -47,16 +56,18 @@ public class TwitterApp {
         sortUsersByEmailButton.addActionListener(e -> sortUsersByEmail());
         panel.add(sortUsersByEmailButton);
 
-
         frame.add(panel);
         frame.setVisible(true);
     }
 
-    private static void addUser() {
+    private static void addUser(boolean isOwner) {
         String alias = JOptionPane.showInputDialog(null, "Introduzca el alias del usuario:");
         String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario:");
         try {
             userManager.addUser(alias, email);
+            if (isOwner) {
+                currentUser = userManager.findUserByEmail(email); // Asegurarse de que el dueño es el usuario actual.
+            }
             JOptionPane.showMessageDialog(null, "Usuario registrado con éxito.");
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(null, "Error al registrar usuario: " + ex.getMessage());
@@ -184,3 +195,4 @@ public class TwitterApp {
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
     }
 }
+
