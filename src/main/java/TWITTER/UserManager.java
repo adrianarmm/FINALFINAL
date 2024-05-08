@@ -1,5 +1,7 @@
 package TWITTER;
 
+import TWITTER.CuentaUsuario;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,7 +12,7 @@ import java.util.List;
 
 public class UserManager {
     private List<CuentaUsuario> users;
-    private  CuentaUsuario currentUser;
+    private CuentaUsuario currentUser;
 
     public void loadUsersFromFile(String fileName) {
         users = new ArrayList<>();
@@ -52,3 +54,4 @@ public class UserManager {
         Collections.sort(users, Comparator.comparing(CuentaUsuario::getEmail));
     }
 }
+
