@@ -1,4 +1,6 @@
 package TWITTER;
+import TWITTER.CuentaUsuario;
+import TWITTER.Tweet;
 
 public class Retweet extends Tweet {
     private Tweet originalTweet;
@@ -20,5 +22,9 @@ public class Retweet extends Tweet {
                 ", message='" + getMessage() + '\'' +
                 ", sender='" + (getSender() != null ? getSender().getAlias() : "Unknown sender") + '\'' +
                 '}';
+    }
+
+    private CuentaUsuario getSender() {
+        return super.getUser();
     }
 }
