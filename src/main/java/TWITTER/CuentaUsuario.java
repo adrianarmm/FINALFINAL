@@ -82,4 +82,8 @@ public class CuentaUsuario {
                 System.out.println(tweet.getText() + " - @" + tweet.getUser().getAlias());
             }
         }
+
+    public Object getEmail() {
+        return email;
     }
+}
