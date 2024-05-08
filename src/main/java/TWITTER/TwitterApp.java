@@ -9,6 +9,24 @@ public class TwitterApp {
     private static CuentaUsuario currentUser;
 
     public static void main(String[] args) {
+
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            // If Nimbus is not available, fall back to the default look and feel.
+            try {
+                UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+
         userManager = new UserManager();
         registerOwner();
         initializeGUI();
@@ -28,36 +46,22 @@ public class TwitterApp {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(7, 1));
 
-        JButton addUserButton = new JButton("Registrar nuevo usuario");
-        addUserButton.addActionListener(e -> addUser(false));
-        panel.add(addUserButton);
-
-        JButton loadUserButton = new JButton("Cargar usuario en memoria");
-        loadUserButton.addActionListener(e -> loadUser());
-        panel.add(loadUserButton);
-
-        JButton publishTweetButton = new JButton("Publicar tweet");
-        publishTweetButton.addActionListener(e -> publishTweet());
-        panel.add(publishTweetButton);
-
-        JButton followUserButton = new JButton("Seguir a un usuario");
-        followUserButton.addActionListener(e -> followUser());
-        panel.add(followUserButton);
-
-        JButton viewTimelineButton = new JButton("Ver Timeline");
-        viewTimelineButton.addActionListener(e -> viewTimeline());
-        panel.add(viewTimelineButton);
-
-        JButton sendMessageButton = new JButton("Enviar mensaje directo");
-        sendMessageButton.addActionListener(e -> sendDirectMessage());
-        panel.add(sendMessageButton);
-
-        JButton sortUsersByEmailButton = new JButton("Ordenar usuarios por email");
-        sortUsersByEmailButton.addActionListener(e -> sortUsersByEmail());
-        panel.add(sortUsersByEmailButton);
+        addButton("Registrar nuevo usuario", panel, e -> addUser(false));
+        addButton("Cargar usuario en memoria", panel, e -> loadUser());
+        addButton("Publicar tweet", panel, e -> publishTweet());
+        addButton("Seguir a un usuario", panel, e -> followUser());
+        addButton("Ver Timeline", panel, e -> viewTimeline());
+        addButton("Enviar mensaje directo", panel, e -> sendDirectMessage());
+        addButton("Ordenar usuarios por email", panel, e -> sortUsersByEmail());
 
         frame.add(panel);
         frame.setVisible(true);
+    }
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
     }
 
     private static void addUser(boolean isOwner) {
@@ -74,6 +78,12 @@ public class TwitterApp {
         }
     }
 
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
+    }
     private static void loadUser() {
         String email = JOptionPane.showInputDialog(null, "Introduzca el email del usuario a cargar:");
         if (!Utils.isValidEmail(email)) {
@@ -106,7 +116,12 @@ public class TwitterApp {
         }
     }
 
-
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
+    }
 
     private static void publishTweet() {
         if (currentUser == null) {
@@ -122,7 +137,12 @@ public class TwitterApp {
         currentUser.tweet(tweet);
         JOptionPane.showMessageDialog(null, "Tweet publicado.");
     }
-
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
+    }
     private static void followUser() {
         if (currentUser == null) {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
@@ -155,7 +175,12 @@ public class TwitterApp {
     }
 
 
-
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
+    }
     private static void viewTimeline() {
         if (currentUser == null) {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
@@ -176,7 +201,12 @@ public class TwitterApp {
         JOptionPane.showMessageDialog(null, timelineDetails.toString(), "Timeline y Seguimientos", JOptionPane.INFORMATION_MESSAGE);
     }
 
-
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
+    }
     private static void sendDirectMessage() {
         if (currentUser == null) {
             JOptionPane.showMessageDialog(null, "No hay usuario cargado.");
@@ -193,7 +223,12 @@ public class TwitterApp {
         currentUser.sendDirectMessage(dm);
         JOptionPane.showMessageDialog(null, "Mensaje enviado a: " + receiver.getAlias());
     }
-
+    private static void addButton(String text, JPanel panel, ActionListener actionListener) {
+        JButton button = new JButton(text);
+        button.addActionListener(actionListener);
+        button.setBackground(new Color(173, 216, 230)); // Light blue color
+        panel.add(button);
+    }
     private static void sortUsersByEmail() {
         userManager.sortUsersByEmail();
         JOptionPane.showMessageDialog(null, "Usuarios ordenados por email.");
