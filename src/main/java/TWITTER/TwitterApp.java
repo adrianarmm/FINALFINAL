@@ -34,7 +34,7 @@ public class TwitterApp {
     }
 
     private static void registerOwner() {
-        ImageIcon icon = new ImageIcon(TwitterApp.class.getResource("/Users/adrianareyesmorera/Downloads/pajarito.jpg.avif")); // Asegúrate de cambiar la ruta
+        ImageIcon icon = new ImageIcon(TwitterApp.class.getResource("/Users/adrianareyesmorera/Downloads/pajarito.png")); // Asegúrate de cambiar la ruta
         JOptionPane.showMessageDialog(
                 null,
                 "Bienvenido a Twitter App, por favor registre al dueño de la cuenta.",
