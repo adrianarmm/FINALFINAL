@@ -3,12 +3,13 @@ package TWITTER;
 import java.time.LocalDate;
 
 public class Tweet {
-    protected LocalDate time;
-    protected String message;
-    protected CuentaUsuario sender;
+    private LocalDate time;
+    private String message;
+    private CuentaUsuario sender;
 
-    public Tweet(String message) {
-        this.time = time;
+    // Constructor modificado para incluir CuentaUsuario como el remitente del tweet.
+    public Tweet(String message, CuentaUsuario sender) {
+        this.time = LocalDate.now(); // Asumimos que el tweet se crea con la fecha actual.
         this.message = message;
         this.sender = sender;
     }
@@ -30,11 +31,8 @@ public class Tweet {
         return "Tweet{" +
                 "time=" + time +
                 ", message='" + message + '\'' +
-                ", sender=" + sender.getAlias() +
+                ", sender=" + (sender != null ? sender.getAlias() : "Unknown") + // Verifica si el remitente es nulo antes de acceder a su alias.
                 '}';
     }
 
-    public boolean getText() {
-        return false;
-    }
 }
