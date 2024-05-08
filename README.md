@@ -110,7 +110,41 @@ La complejidad computacional del algoritmo es O(log n), ya que en cada iteració
 
 
 ## EJERCICIO 5 
-ANALISIS DETALLADO: 
+**Descripción General**
+TwitterApp es una aplicación de escritorio construida en Java utilizando la biblioteca Swing. Esta aplicación simula una interfaz de usuario básica para interactuar con una plataforma de tipo Twitter, permitiendo a los usuarios registrar cuentas, cargar usuarios, publicar tweets, seguir a otros usuarios, y más. La aplicación está diseñada para ser sencilla y fácil de usar, con una interfaz que imita la experiencia de una aplicación móvil.
+
+**Características**
+*Registro de Usuario:* Permite a los nuevos usuarios registrarse proporcionando un alias y un email.
+*Carga de Usuario:* Los usuarios pueden cargar sus perfiles usando su dirección de email.
+*Publicación de Tweets:* Los usuarios pueden escribir y publicar tweets.
+Seguir a Usuarios: Funcionalidad para seguir a otros usuarios a través de su email.
+*Visualización del Timeline:* Muestra el timeline del usuario cargado, incluyendo tweets y los usuarios que sigue.
+*Envío de Mensajes Directos:* Permite a los usuarios enviar mensajes directos a otros.
+*Ordenación de Usuarios por Email:* Organiza y muestra una lista de todos los usuarios registrados, ordenados por email.
+
+**Tecnologías Utilizadas**
+*Java:* Lenguaje de programación usado para desarrollar la aplicación.
+*Swing:* Biblioteca de GUI para Java utilizada para construir la interfaz de usuario.
+*Nimbus Look and Feel:* Utilizado para mejorar el aspecto visual de la interfaz de usuario de Swing.
+*Iconos y Colores Personalizados:* Uso de colores personalizados y un icono específico (el pájaro de Twitter) para mejorar la estética de la aplicación.
+
+**Configuración de la Interfaz de Usuario**
+*Marco Principal:* La aplicación utiliza un JFrame configurado para imitar el tamaño de una pantalla de móvil (360x640).
+*Panel de Control:* Un JPanel con un GridLayout que organiza los botones de manera ordenada y accesible.
+*Botones:* Botones con colores personalizados y texto en negrita para facilitar la lectura y la interacción. Cada botón está configurado con un ActionListener que desencadena diferentes funcionalidades de la aplicación.
+
+
+**Extras**
+*Nimbus Look and Feel:* Mejora la interfaz de usuario proporcionando un estilo visual más moderno y atractivo que el estilo por defecto de Swing.
+*Botones de Colores:* Los botones utilizan un color azul claro (RGB 173, 216, 230) para estar en línea con la paleta de colores de Twitter, mejorando la experiencia visual general.
+*Icono del Pájaro de Twitter:* Se utiliza un icono representativo de Twitter en el diálogo de bienvenida para reforzar la temática de la aplicación y hacerla más atractiva.
+
+
+**Implementación del Código**
+El código está organizado en métodos que manejan diferentes aspectos de la aplicación, desde la configuración inicial del Look and Feel hasta la funcionalidad específica de cada botón. La aplicación maneja los errores básicos, como la validación de la entrada del usuario y la gestión de recursos faltantes (como el icono).
+
+**Conclusión**
+TwitterApp es una simulación de cliente de Twitter diseñada para demostrar la creación de interfaces de usuario en Java con Swing. Aunque simple, la aplicación incorpora prácticas de diseño de software como la separación de la lógica de la interfaz de usuario y la gestión de eventos, y puede servir como un excelente proyecto de referencia para aquellos que están aprendiendo a desarrollar aplicaciones de escritorio en Java. 
 
 
 
