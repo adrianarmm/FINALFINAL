@@ -57,7 +57,7 @@ En términos de complejidad espacial, una pila y una cola requieren ambas O(n) e
 En resumen, una pila y una cola son ambas estructuras de datos útiles, pero difieren en la forma en que se agregan y eliminan elementos. Una pila sigue el principio LIFO y es útil para tareas que involucran deshacer operaciones, mientras que una cola sigue el principio FIFO y es útil para tareas que involucran procesar elementos en el orden en que fueron recibidos. Tanto una pila como una cola tienen una complejidad temporal de O(1) para sus operaciones principales y una complejidad espacial de O(n). La elección entre usar una pila o una cola depende del problema específico que debe resolverse.
 
 **PARTE 4**
-EL CODIGO ESTA EN LA CARPETA
+EL CODIGO ESTA EN LA CARPETA, EL ARCHIVO SE LLAMA InsertionSort.
 En cada iteración, el algoritmo selecciona un elemento de la lista desordenada y lo compara con los elementos anteriores en la lista ordenada. Si el elemento seleccionado es menor que el elemento anterior en la lista ordenada, se mueven los elementos anteriores a la derecha para hacer espacio para el elemento seleccionado. El proceso continúa hasta que el elemento seleccionado esté en su lugar correcto en la lista ordenada.
 
 La complejidad temporal del algoritmo de ordenación por inserción es O(n^2), donde n es el número de elementos en la lista. La complejidad espacial es O(1), ya que solo se requiere una cantidad fija de espacio adicional para realizar el algoritmo.
@@ -73,10 +73,31 @@ Después de la sexta iteración, el array es [13, 16, 20, 22, 50, 84, 85, 89].
 Después de la séptima iteración, el array es [13, 16, 20, 22, 50, 84, 85, 89].
 Por lo tanto, el array ordenado es [13, 16, 20, 22, 50, 84, 85, 89].
 
+**PARTE 5**
+EL CODIGO ESTA EN LA CARPETA, EL ARCHIVO SE LLAMA EfficiencyComparison.
+Para determinar a partir de qué tamaño de entrada n la función A es más eficiente que la función B, podemos igualar las dos funciones y resolver para n.
 
+La función A tiene una complejidad temporal de O(n) y un número de operaciones de 1024n, mientras que la función B tiene una complejidad temporal de O(n^3) y un número de operaciones de 16n^3.
 
+Si igualamos ambas funciones y despejamos n, tenemos:
 
+1024n = 16n^3
 
+Podemos dividir ambos lados de la ecuación por n para simplificar:
+
+1024 = 16n^2
+
+A continuación, podemos dividir ambos lados de la ecuación por 16:
+
+64 = n^2
+
+Para obtener el valor de n, podemos calcular la raíz cuadrada de ambos lados de la ecuación:
+
+n = √64 = 8
+
+Por lo tanto, a partir de un tamaño de entrada n de 8, la función A es más eficiente que la función B en términos de número de operaciones.
+
+## EJERCICIO 3
 
 
 
